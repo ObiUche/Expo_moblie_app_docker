@@ -11,6 +11,11 @@ RUN apk add --no-cache python3 make g++ git curl bash
 ## add installs packages
 ## for the ngork we need python3 make g++ git curl bash to use tunnels with expo
 
+## install expo image picker 
+RUN npm install expo-image-picker 
+RUN npm install firebase
+## install firebase
+
 RUN npm install -g @expo/ngrok@latest
 ## npm install -g installs a package globally
 
