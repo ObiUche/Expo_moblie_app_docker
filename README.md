@@ -1,4 +1,4 @@
-## Setup for Team Members
+## Setup for Team
 
 1. **Install prerequisites:**
    - Docker Desktop
@@ -6,9 +6,10 @@
    - Expo Go app on phone
 
 2. **Clone and run:**
-   ```bash
-   git clone <https://github.com/ObiUche/Expo_moblie_app_docker.git>
-   cd <MOBLIE_APP>
-   npm run dev
+   ```CMD Line if on Windows
+   git clone https://github.com/ObiUche/Expo_moblie_app_docker.git
+   cd Expo_moblie_app_docker
+   docker-compose up --build
+   
 
 ## enter this url on our phone exp://myapp-docker.ngrok.io
