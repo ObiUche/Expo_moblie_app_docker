@@ -12,7 +12,10 @@ RUN apk add --no-cache python3 make g++ git curl bash
 ## for the ngork we need python3 make g++ git curl bash to use tunnels with expo
 
 ## install expo image picker 
-RUN npm install expo-image-picker 
+## install react maps
+RUN npm install react-native-maps@1.20.1
+RUN npm install expo-image-picker@17.0.1
+RUN npm install expo-location@19.0.8
 RUN npm install firebase
 ## install firebase
 
@@ -23,7 +26,8 @@ RUN npm install -g @expo/ngrok@latest
 COPY moblie/package*.json ./
 
 ## npm install all dep clean install FAST
-RUN npm ci
+RUN npm install
+## cant run npm ci must be npm install for first installl
 
 ## COPY files from /moblie to /app
 COPY moblie/ ./
@@ -36,6 +40,8 @@ EXPOSE 8081 19000 19001 19002
 ## 19002 is the port for the tunnel connection
 
 ##COMMAND  that runs a container
+
+
 
 CMD ["npx","expo","start","--tunnel","--clear"]
 ## npx runs npm packages without installing them globally
